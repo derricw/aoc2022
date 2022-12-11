@@ -1,9 +1,5 @@
-
 import system
-import std/strutils, std/math
-import std/algorithm
-
-let input = splitLines(readAll(system.stdin))
+import std/[strutils, math, algorithm]
 
 proc p1(items: openArray[string]) =
   var biggest = 0
@@ -23,8 +19,6 @@ proc p1(items: openArray[string]) =
 
   echo biggest
 
-p1 input
-
 proc p2(items: openArray[string]) =
   var manifest: seq[int]
   var sack: seq[int]
@@ -41,4 +35,7 @@ proc p2(items: openArray[string]) =
 
   echo sum(manifest[0 .. 2])
 
+
+let input = splitLines(readAll(system.stdin))
+p1 input
 p2 input
