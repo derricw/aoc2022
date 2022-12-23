@@ -9,7 +9,6 @@ proc parseStacks(stackDef: openArray[string]): seq[Stack[char]]=
       while z >= 0:
         if (len(stackDef[z]) >= i and stackDef[z][i] != ' '):
           stack.push stackDef[z][i]
-          #echo stackDef[z][i]
           z -= 1
         else:
           break
