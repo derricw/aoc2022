@@ -1,4 +1,4 @@
-import std/[algorithm, strutils, enumerate, tables, sugar, math, sets, sequtils]
+import std/[strutils, enumerate]
 import aoclib
 
 proc parseStacks(stackDef: openArray[string]): seq[Stack[char]]= 
