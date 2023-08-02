@@ -5,8 +5,8 @@ END {
   if (sum>0) 
     sums[arraylen]=sum
 
-  asort(sums)
-  for (i=length(sums); i>length(sums)-3; i--)
+  n = asort(sums)
+  for (i=n; i>n-3; i--)
     calories += sums[i]
   print calories
 }
