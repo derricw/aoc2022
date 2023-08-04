@@ -1,3 +1,4 @@
+# cut a string in half
 function halfString(s, pair,   arr) {
   split(s, arr, "")
   for (i=1; i<=length(arr)/2; i++) {
@@ -8,24 +9,24 @@ function halfString(s, pair,   arr) {
   }
 }
 
+# find the first common character in 2 strings
 function findCommon(s1, s2,    arr1, arr2, set) {
   split(s1, arr1, "")
-  for (i=1; i<=length(arr1); i++) {
+  for (i in arr1) {
     set[arr1[i]] = 1
   }
   split(s2, arr2, "")
-  for (char in arr2) {
-    if (arr2[char] in set) {
-      return arr2[char]
+  for (i in arr2) {
+    if (arr2[i] in set) {
+      return arr2[i]
     }
   }
 }
 
 BEGIN {
   split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", alphabet, "")
-  for (i=1; i<=length(alphabet); i++) {
+  for (i in alphabet) {
     priority[alphabet[i]] = i
-    #print alphabet[i], priority[alphabet[i]]
   }
 }
 {
@@ -34,5 +35,4 @@ BEGIN {
   delete pair
   sum += priority[common]
 }
-
 END { print sum }
